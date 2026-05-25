@@ -32,10 +32,10 @@ $targets = @("google.com", "microsoft.com", "smtp.office365.com")
 
 # ── Port Test Function ─────────────────────────────────────────────────────
 function Test-Port {
-    param([string]$Host, [int]$Port, [int]$TimeoutMs = 2000)
+    param([string]$HostName, [int]$Port, [int]$TimeoutMs = 2000)
     try {
         $client = New-Object System.Net.Sockets.TcpClient
-        $task   = $client.ConnectAsync($Host, $Port)
+        $task   = $client.ConnectAsync($HostName, $Port)
         if ($task.Wait($TimeoutMs)) {
             $client.Close()
             return "OPEN"
@@ -59,7 +59,7 @@ foreach ($t in $targets) {
     foreach ($pd in $portDefs) {
         Write-Host "    Port $($pd.Port) ($($pd.Service))..." -ForegroundColor Gray -NoNewline
         $start  = Get-Date
-        $status = Test-Port -Host $t -Port $pd.Port
+        $status = Test-Port -HostName $t -Port $pd.Port
         $elapsedMs = [math]::Round(((Get-Date) - $start).TotalMilliseconds)
         Write-Host " $status" -ForegroundColor $(if ($status -eq "OPEN") { "Green" } elseif ($status -eq "TIMEOUT") { "Yellow" } else { "DarkGray" })
         $results += [PSCustomObject]@{
