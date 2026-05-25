@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Network Connectivity Report — Enterprise IT Network Diagnostics Toolkit</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4f8; color: #1e293b; padding: 24px; }
+  .header { background: linear-gradient(135deg, #0078d4, #005a9e); color: white; padding: 26px 30px; border-radius: 12px; margin-bottom: 24px; }
+  .header h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .header p  { opacity: 0.85; font-size: 0.875rem; }
+  .script-tag { display: inline-block; background: rgba(255,255,255,0.2); border-radius: 20px; padding: 2px 12px; font-size: 0.78rem; margin-bottom: 10px; }
+  .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: white; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 4px rgba(0,0,0,.07); text-align: center; }
+  .stat-value { font-size: 2rem; font-weight: 700; color: #0078d4; }
+  .stat-label { font-size: 0.8rem; color: #64748b; margin-top: 4px; }
+  .section { background: white; border-radius: 10px; padding: 22px; box-shadow: 0 1px 4px rgba(0,0,0,.07); margin-bottom: 20px; }
+  .section h2 { font-size: 1rem; color: #0078d4; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 16px; }
+  .env-row { display: flex; gap: 32px; flex-wrap: wrap; font-size: 0.875rem; }
+  .env-item { display: flex; flex-direction: column; gap: 2px; }
+  .env-label { font-size: 0.75rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .env-value { color: #1e293b; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  th { background: #f8fafc; color: #475569; font-weight: 600; padding: 10px 14px; text-align: left; border-bottom: 2px solid #e2e8f0; }
+  td { padding: 10px 14px; border-bottom: 1px solid #f1f5f9; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; color: white; }
+  .overall { display: inline-block; padding: 6px 18px; border-radius: 20px; font-size: 0.95rem; font-weight: 700; color: white; background: #f2c86d; }
+  .footer { text-align: center; font-size: 0.75rem; color: #94a3b8; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="script-tag">Script 02 of 08</div>
+  <h1>Network Connectivity Report</h1>
+  <p>Generated: 2026-05-24 20:53:45 &nbsp;|&nbsp; Author: Md Rahat Islam Anik &nbsp;|&nbsp; Enterprise IT Network Diagnostics Toolkit</p>
+</div>
+
+<div class="summary">
+  <div class="stat-card"><div class="stat-value">7</div><div class="stat-label">Hosts Tested</div></div>
+  <div class="stat-card"><div class="stat-value" style="color:#45d48a">6</div><div class="stat-label">Passing</div></div>
+  <div class="stat-card"><div class="stat-value" style="color:#f2c86d">0</div><div class="stat-label">Degraded</div></div>
+  <div class="stat-card"><div class="stat-value" style="color:#ff6b6b">1</div><div class="stat-label">Failed</div></div>
+</div>
+
+<div class="section">
+  <h2>Environment &nbsp; <span class="overall">DEGRADED</span></h2>
+  <div class="env-row" style="margin-top:12px">
+    <div class="env-item"><span class="env-label">Local IP</span><span class="env-value">10.88.111.3</span></div>
+    <div class="env-item"><span class="env-label">Default Gateway</span><span class="env-value">10.88.111.254</span></div>
+    <div class="env-item"><span class="env-label">Tested</span><span class="env-value">2026-05-24 20:53:45</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Connectivity Results</h2>
+  <table>
+    <thead><tr><th>Host</th><th>Target</th><th>Status</th><th>Packet Loss</th><th>Min RTT</th><th>Avg RTT</th><th>Max RTT</th></tr></thead>
+    <tbody><tr>
+      <td>Default Gateway</td>
+      <td>10.88.111.254</td>
+      <td><span class='badge' style='background:#45d48a'>PASS</span></td>
+      <td>0%</td>
+      <td>4.839 ms</td>
+      <td>9.283 ms</td>
+      <td>14.243 ms</td>
+    </tr><tr>
+      <td>Google DNS (8.8.8.8)</td>
+      <td>8.8.8.8</td>
+      <td><span class='badge' style='background:#45d48a'>PASS</span></td>
+      <td>0%</td>
+      <td>7.431 ms</td>
+      <td>12.346 ms</td>
+      <td>16.815 ms</td>
+    </tr><tr>
+      <td>Cloudflare DNS (1.1.1.1)</td>
+      <td>1.1.1.1</td>
+      <td><span class='badge' style='background:#45d48a'>PASS</span></td>
+      <td>0%</td>
+      <td>7.072 ms</td>
+      <td>12.819 ms</td>
+      <td>17.839 ms</td>
+    </tr><tr>
+      <td>Quad9 DNS (9.9.9.9)</td>
+      <td>9.9.9.9</td>
+      <td><span class='badge' style='background:#45d48a'>PASS</span></td>
+      <td>0%</td>
+      <td>6.462 ms</td>
+      <td>12.625 ms</td>
+      <td>17.914 ms</td>
+    </tr><tr>
+      <td>Google</td>
+      <td>google.com</td>
+      <td><span class='badge' style='background:#45d48a'>PASS</span></td>
+      <td>0%</td>
+      <td>6.474 ms</td>
+      <td>11.831 ms</td>
+      <td>17.345 ms</td>
+    </tr><tr>
+      <td>Microsoft</td>
+      <td>microsoft.com</td>
+      <td><span class='badge' style='background:#ff6b6b'>FAIL</span></td>
+      <td>100%</td>
+      <td>6.474 ms</td>
+      <td>11.831 ms</td>
+      <td>17.345 ms</td>
+    </tr><tr>
+      <td>Cloudflare</td>
+      <td>cloudflare.com</td>
+      <td><span class='badge' style='background:#45d48a'>PASS</span></td>
+      <td>0%</td>
+      <td>5.691 ms</td>
+      <td>19.401 ms</td>
+      <td>47.930 ms</td>
+    </tr></tbody>
+  </table>
+</div>
+
+<div class="footer">Enterprise IT Network Diagnostics Toolkit &nbsp;·&nbsp; Md Rahat Islam Anik &nbsp;·&nbsp; 2026-05-24 20:53:45</div>
+</body>
+</html>
