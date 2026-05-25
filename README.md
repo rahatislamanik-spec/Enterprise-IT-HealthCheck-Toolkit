@@ -150,3 +150,18 @@ Cloud Computing & Network Administration · George Brown College · May 2026
 ![Sample Outputs](Screenshots/13-Sample-Outputs.png)
 ![Security Files](Screenshots/14-security-files.png)
 ![Project Structure](Screenshots/15-project-structure.png)
+
+### Live Site & Final Repo
+![Live Site Browser](Screenshots/16-live-site-browser.png)
+![Repo Final Structure](Screenshots/17-repo-final-structure.png)
+
+### Scripts 04 & 05 — Wi-Fi & Network Adapter
+![Wi-Fi Script Terminal](Screenshots/18-wifi-script-terminal.png)
+![Adapter Report Top](Screenshots/20-adapter-report-top.png)
+![Adapter Report Interfaces](Screenshots/21-adapter-report-interfaces.png)
+
+### Scripts 07 & 08 — SSL & Latency Reports
+![SSL Certificate Report](Screenshots/23-ssl-report-browser.png)
+![Latency Baseline Report](Screenshots/24-latency-report-browser.png)
+![HTML Reports Gallery](Screenshots/25-html-reports-gallery.png)
+![HTML Report Detail](Screenshots/26-html-report-detail.png)
