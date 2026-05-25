@@ -1,11 +1,11 @@
-f0:ef:86:8e:ac:c7 - Google, Inc.
-a0:2d:13:e8:1b:d2 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
-92:8d:1e:f9:b8:72 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
-14:14:16:8b:99:d5 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
-4c:2f:7b:ed:a6:b3 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
-b0:a3:f2:d0:f3:65 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
-a2:a4:f7:1c:c1:ab - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
-aa:5b:d0:d0:1f:96 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
-12:2:71:e4:db:5d - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+b8:27:eb:4a:12:03 - Google, Inc.
+dc:a6:32:11:9f:47 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+3c:22:fb:9e:d1:08 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+00:11:32:5a:e7:c2 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+50:3e:aa:7b:2d:91 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+18:b4:30:c1:f5:22 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+44:65:0d:8e:3a:17 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+7c:d1:c3:f2:88:45 - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
+00:50:56:a1:2b:3f - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
 ff:ff:ff:ff:ff:ff - {"errors":{"message":"Please slow down your requests or upgrade your plan at https://macvendors.com","detail":"Too Many Requests"}}
 1:0:5e:0:0:fb - {"errors":{"detail":"Not Found"}}

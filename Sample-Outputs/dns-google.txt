@@ -17,8 +17,8 @@ google.com.		60670	IN	NS	ns4.google.com.
 google.com.		60670	IN	NS	ns1.google.com.
 google.com.		60670	IN	NS	ns2.google.com.
 google.com.		60670	IN	NS	ns3.google.com.
-Server:		66.207.192.6
-Address:	66.207.192.6#53
+Server:		8.8.8.8
+Address:	8.8.8.8#53
 
 Non-authoritative answer:
 Name:	github.com

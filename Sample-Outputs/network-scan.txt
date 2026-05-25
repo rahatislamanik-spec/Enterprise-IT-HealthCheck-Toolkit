@@ -1,3 +1,3 @@
-My IP: 10.88.111.3
-Network range: 10.88.111.0/24
+My IP: 192.168.10.105
+Network range: 192.168.10.0/24
 Scan complete

@@ -1,1 +1,1 @@
-Scanning gateway: 10.88.111.254
+Scanning gateway: 192.168.10.1

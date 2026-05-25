@@ -2,15 +2,15 @@ Routing tables
 
 Internet:
 Destination        Gateway            Flags               Netif Expire
-default            10.88.111.254      UGScg                 en0       
-10.88.111/24       link#11            UCS                   en0      !
-10.88.111.3/32     link#11            UCS                   en0      !
-10.88.111.15       b0:a3:f2:d0:f3:65  UHLWI                 en0   1089
-10.88.111.24       a2:a4:f7:1c:c1:ab  UHLWIi                en0    987
-10.88.111.25       link#11            UHLWI                 en0      !
-10.88.111.254/32   link#11            UCS                   en0      !
-10.88.111.254      12:2:71:e4:db:5d   UHLWIir               en0   1142
-10.88.111.255      ff:ff:ff:ff:ff:ff  UHLWbI                en0      !
+default            192.168.10.1      UGScg                 en0       
+192.168.10.0/24       link#11            UCS                   en0      !
+192.168.10.105/32     link#11            UCS                   en0      !
+192.168.10.15       18:b4:30:c1:f5:22  UHLWI                 en0   1089
+192.168.10.24       44:65:0d:8e:3a:17  UHLWIi                en0    987
+192.168.10.25       link#11            UHLWI                 en0      !
+192.168.10.1/32   link#11            UCS                   en0      !
+192.168.10.1      00:50:56:a1:2b:3f   UHLWIir               en0   1142
+192.168.10.255      ff:ff:ff:ff:ff:ff  UHLWbI                en0      !
 127                127.0.0.1          UCS                   lo0       
 127.0.0.1          127.0.0.1          UH                    lo0       
 169.254            link#11            UCS                   en0      !
@@ -30,8 +30,8 @@ default                                 fe80::%utun5                            
 fe80::%lo0/64                           fe80::1%lo0                             UcI                   lo0       
 fe80::1%lo0                             link#1                                  UHLI                  lo0       
 fe80::%en0/64                           link#11                                 UCI                   en0       
-fe80::1c21:2cf:ca5e:7e7f%en0            aa:5b:d0:d0:1f:96                       UHLWIi                en0       
-fe80::1c57:884f:d898:d0a6%en0           92:8d:1e:f9:b8:72                       UHLI                  lo0       
+fe80::1c21:2cf:ca5e:7e7f%en0            7c:d1:c3:f2:88:45                       UHLWIi                en0       
+fe80::1c57:884f:d898:d0a6%en0           3c:22:fb:9e:d1:08                       UHLI                  lo0       
 fe80::28fd:e3ff:fede:9669%awdl0         2a:fd:e3:de:96:69                       UHLI                  lo0       
 fe80::28fd:e3ff:fede:9669%llw0          2a:fd:e3:de:96:69                       UHLI                  lo0       
 fe80::%utun0/64                         fe80::111f:b5a5:997f:8d21%utun0         UcI                 utun0       
