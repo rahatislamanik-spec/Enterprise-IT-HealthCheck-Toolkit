@@ -29,62 +29,50 @@ Write-Host ""
 # ── Run Extended Ping ──────────────────────────────────────────────────────
 function Get-LatencyStats {
     param([string]$HostName, [int]$Count, [int]$Timeout)
+    try {
+        $pingResults = Test-Connection -TargetName $HostName -Count $Count -ErrorAction SilentlyContinue
+        $successful  = @($pingResults | Where-Object { $_.Status -eq "Success" })
+        $rtts        = $successful | ForEach-Object { [double]$_.Latency }
+        $received    = $rtts.Count
+        $loss        = [math]::Round((($Count - $received) / $Count) * 100, 1)
 
-    $raw = & ping -c $Count $HostName 2>&1
-    $output = $raw -join "`n"
-
-    # Individual RTT values
-    $rtts = [regex]::Matches($output, 'time=([\d.]+)\s+ms') |
-            ForEach-Object { [double]$_.Groups[1].Value }
-
-    # Packet loss
-    $lossLine  = $raw | Where-Object { $_ -match "packet loss" }
-    $lossMatch = [regex]::Match($lossLine, '(\d+(?:\.\d+)?)% packet loss')
-    $loss      = if ($lossMatch.Success) { [double]$lossMatch.Groups[1].Value } else { 100 }
-
-    if ($rtts.Count -eq 0) {
-        return [PSCustomObject]@{
-            Host       = $Host
-            Sent       = $Count
-            Received   = 0
-            Loss       = 100
-            MinMs      = "—"; MaxMs = "—"; AvgMs = "—"; Jitter = "—"
-            Status     = "FAIL"
-            RTTs       = @()
+        if ($received -eq 0) {
+            return [PSCustomObject]@{
+                HostName = $HostName; Sent = $Count; Received = 0; Loss = 100
+                MinMs = "—"; MaxMs = "—"; AvgMs = "—"; Jitter = "—"
+                Status = "FAIL"; RTTs = @()
+            }
         }
-    }
 
-    $min    = [math]::Round(($rtts | Measure-Object -Minimum).Minimum, 2)
-    $max    = [math]::Round(($rtts | Measure-Object -Maximum).Maximum, 2)
-    $avg    = [math]::Round(($rtts | Measure-Object -Average).Average, 2)
-    $received = $rtts.Count
+        $min    = [math]::Round(($rtts | Measure-Object -Minimum).Minimum, 2)
+        $max    = [math]::Round(($rtts | Measure-Object -Maximum).Maximum, 2)
+        $avg    = [math]::Round(($rtts | Measure-Object -Average).Average, 2)
 
-    # Jitter = mean absolute deviation of consecutive differences
-    $diffs = @()
-    for ($i = 1; $i -lt $rtts.Count; $i++) {
-        $diffs += [math]::Abs($rtts[$i] - $rtts[$i-1])
-    }
-    $jitter = if ($diffs.Count -gt 0) {
-        [math]::Round(($diffs | Measure-Object -Average).Average, 2)
-    } else { 0 }
+        $diffs = @()
+        for ($i = 1; $i -lt $rtts.Count; $i++) {
+            $diffs += [math]::Abs($rtts[$i] - $rtts[$i-1])
+        }
+        $jitter = if ($diffs.Count -gt 0) {
+            [math]::Round(($diffs | Measure-Object -Average).Average, 2)
+        } else { 0 }
 
-    $status = if ($loss -eq 0 -and $avg -lt 50) { "EXCELLENT" }
-              elseif ($loss -eq 0 -and $avg -lt 100) { "GOOD" }
-              elseif ($loss -lt 10) { "FAIR" }
-              elseif ($loss -lt 50) { "POOR" }
-              else { "FAIL" }
+        $status = if ($loss -eq 0 -and $avg -lt 50) { "EXCELLENT" }
+                  elseif ($loss -eq 0 -and $avg -lt 100) { "GOOD" }
+                  elseif ($loss -lt 10) { "FAIR" }
+                  elseif ($loss -lt 50) { "POOR" }
+                  else { "FAIL" }
 
-    return [PSCustomObject]@{
-        Host      = $Host
-        Sent      = $Count
-        Received  = $received
-        Loss      = $loss
-        MinMs     = $min
-        MaxMs     = $max
-        AvgMs     = $avg
-        Jitter    = $jitter
-        Status    = $status
-        RTTs      = $rtts
+        return [PSCustomObject]@{
+            HostName = $HostName; Sent = $Count; Received = $received; Loss = $loss
+            MinMs = $min; MaxMs = $max; AvgMs = $avg; Jitter = $jitter
+            Status = $status; RTTs = $rtts
+        }
+    } catch {
+        return [PSCustomObject]@{
+            HostName = $HostName; Sent = $Count; Received = 0; Loss = 100
+            MinMs = "—"; MaxMs = "—"; AvgMs = "—"; Jitter = "—"
+            Status = "FAIL"; RTTs = @()
+        }
     }
 }
 
