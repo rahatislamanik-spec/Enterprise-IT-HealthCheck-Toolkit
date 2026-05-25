@@ -59,7 +59,7 @@ $allResults = @{}
 foreach ($t in $targets) {
     Write-Host "Tracing route to $($t.Label) ($($t.Host))..." -ForegroundColor Yellow
     # -m 20 = max 20 hops, -q 3 = 3 probes per hop, -w 2 = 2 second timeout
-    $raw  = & traceroute -m 20 -q 3 -w 2 $t.Host 2>&1
+    $raw  = & traceroute -m 15 -q 1 -w 1 $t.Host 2>&1
     $hops = @()
 
     foreach ($line in $raw) {
