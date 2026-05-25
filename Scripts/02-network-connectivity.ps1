@@ -50,7 +50,8 @@ foreach ($name in $hosts.Keys) {
     $loss = if ($lossMatch.Success) { [double]$lossMatch.Groups[1].Value } else { 100 }
 
     # Parse latency (round-trip)
-    $rtLine = $raw | Where-Object { $_ -match "round-trip|rtt" }
+    $rtLine  = ($raw | Where-Object { $_ -match "round-trip|rtt" } | Select-Object -First 1)
+    $rtLine  = if ($rtLine) { $rtLine } else { "" }
     $rtMatch = [regex]::Match($rtLine, '(\d+(?:\.\d+)?)/(\d+(?:\.\d+)?)/(\d+(?:\.\d+)?)')
     $minMs  = if ($rtMatch.Success) { $rtMatch.Groups[1].Value } else { "—" }
     $avgMs  = if ($rtMatch.Success) { $rtMatch.Groups[2].Value } else { "—" }
