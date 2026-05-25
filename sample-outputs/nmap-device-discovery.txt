@@ -1,0 +1,1 @@
+nmap not installed. Install with: brew install nmap

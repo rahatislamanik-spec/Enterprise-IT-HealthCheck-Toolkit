@@ -1,0 +1,12 @@
+? (10.88.111.1) at f0:ef:86:8e:ac:c7 on en0 ifscope [ethernet]
+? (10.88.111.2) at a0:2d:13:e8:1b:d2 on en0 ifscope [ethernet]
+? (10.88.111.3) at 92:8d:1e:f9:b8:72 on en0 ifscope permanent [ethernet]
+? (10.88.111.6) at 14:14:16:8b:99:d5 on en0 ifscope [ethernet]
+? (10.88.111.7) at 4c:2f:7b:ed:a6:b3 on en0 ifscope [ethernet]
+? (10.88.111.15) at b0:a3:f2:d0:f3:65 on en0 ifscope [ethernet]
+? (10.88.111.24) at a2:a4:f7:1c:c1:ab on en0 ifscope [ethernet]
+? (10.88.111.25) at aa:5b:d0:d0:1f:96 on en0 ifscope [ethernet]
+? (10.88.111.254) at 12:2:71:e4:db:5d on en0 ifscope [ethernet]
+? (10.88.111.255) at ff:ff:ff:ff:ff:ff on en0 ifscope [ethernet]
+mdns.mcast.net (224.0.0.251) at 1:0:5e:0:0:fb on en0 ifscope permanent [ethernet]
+Total devices found:       11

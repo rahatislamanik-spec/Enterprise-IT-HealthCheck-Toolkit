@@ -1,0 +1,79 @@
+Link-layer Multicast Group Memberships
+Group               	Link-layer Address	Netif
+1:80:c2:0:0:3       	<none>          	en3
+1:80:c2:0:0:3       	<none>          	en4
+33:33:0:0:0:fb      	<none>          	en0
+1:0:5e:0:0:fb       	<none>          	en0
+1:0:5e:0:0:1        	<none>          	en0
+33:33:ff:ce:16:73   	<none>          	en0
+33:33:0:0:0:1       	<none>          	en0
+33:33:ff:98:d0:a6   	<none>          	en0
+33:33:0:0:0:1       	<none>          	awdl0
+33:33:ff:de:96:69   	<none>          	awdl0
+33:33:0:0:0:fb      	<none>          	awdl0
+33:33:ff:ce:16:73   	<none>          	awdl0
+33:33:80:0:0:fb     	<none>          	awdl0
+33:33:0:0:0:1       	<none>          	llw0
+33:33:ff:de:96:69   	<none>          	llw0
+33:33:0:0:0:fb      	<none>          	llw0
+33:33:ff:ce:16:73   	<none>          	llw0
+
+IPv4 Multicast Group Memberships
+Group               	Link-layer Address	Netif
+224.0.0.251         	<none>          	lo0
+224.0.0.1           	<none>          	lo0
+224.0.0.251         	1:0:5e:0:0:fb   	en0
+224.0.0.1           	1:0:5e:0:0:1    	en0
+
+IPv6 Multicast Group Memberships
+Group               	Link-layer Address	Netif
+ff02::fb%lo0        	<none>          	lo0
+ff02::2:ffb4:4ca8%lo0	<none>          	lo0
+ff01::1%lo0         	<none>          	lo0
+ff02::1%lo0         	<none>          	lo0
+ff02::1:ff00:1%lo0  	<none>          	lo0
+ff02::fb%en0        	33:33:0:0:0:fb  	en0
+ff01::1%en0         	33:33:0:0:0:1   	en0
+ff02::2:ffce:1673%en0	33:33:ff:ce:16:73	en0
+ff02::1%en0         	33:33:0:0:0:1   	en0
+ff02::1:ff98:d0a6%en0	33:33:ff:98:d0:a6	en0
+ff02::fb%utun0      	<none>          	utun0
+ff01::1%utun0       	<none>          	utun0
+ff02::2:ffce:1673%utun0	<none>          	utun0
+ff02::1%utun0       	<none>          	utun0
+ff02::1:ff7f:8d21%utun0	<none>          	utun0
+ff01::1%awdl0       	33:33:0:0:0:1   	awdl0
+ff02::1%awdl0       	33:33:0:0:0:1   	awdl0
+ff02::1:ffde:9669%awdl0	33:33:ff:de:96:69	awdl0
+ff02::fb%awdl0      	33:33:0:0:0:fb  	awdl0
+ff02::2:ffce:1673%awdl0	33:33:ff:ce:16:73	awdl0
+ff01::1%llw0        	33:33:0:0:0:1   	llw0
+ff02::1%llw0        	33:33:0:0:0:1   	llw0
+ff02::1:ffde:9669%llw0	33:33:ff:de:96:69	llw0
+ff02::fb%llw0       	33:33:0:0:0:fb  	llw0
+ff02::2:ffce:1673%llw0	33:33:ff:ce:16:73	llw0
+ff02::fb%utun1      	<none>          	utun1
+ff01::1%utun1       	<none>          	utun1
+ff02::2:ffce:1673%utun1	<none>          	utun1
+ff02::1%utun1       	<none>          	utun1
+ff02::1:fffe:d432%utun1	<none>          	utun1
+ff02::fb%utun2      	<none>          	utun2
+ff01::1%utun2       	<none>          	utun2
+ff02::2:ffce:1673%utun2	<none>          	utun2
+ff02::1%utun2       	<none>          	utun2
+ff02::1:ff2c:69e%utun2	<none>          	utun2
+ff02::fb%utun3      	<none>          	utun3
+ff01::1%utun3       	<none>          	utun3
+ff02::2:ffce:1673%utun3	<none>          	utun3
+ff02::1%utun3       	<none>          	utun3
+ff02::1:ff6a:fe3%utun3	<none>          	utun3
+ff02::fb%utun4      	<none>          	utun4
+ff01::1%utun4       	<none>          	utun4
+ff02::2:ffce:1673%utun4	<none>          	utun4
+ff02::1%utun4       	<none>          	utun4
+ff02::1:ff9a:6455%utun4	<none>          	utun4
+ff02::fb%utun5      	<none>          	utun5
+ff01::1%utun5       	<none>          	utun5
+ff02::2:ffce:1673%utun5	<none>          	utun5
+ff02::1%utun5       	<none>          	utun5
+ff02::1:ff63:2c2e%utun5	<none>          	utun5
