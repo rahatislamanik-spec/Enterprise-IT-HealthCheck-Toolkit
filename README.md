@@ -165,3 +165,18 @@ Cloud Computing & Network Administration · George Brown College · May 2026
 ![Latency Baseline Report](Screenshots/24-latency-report-browser.png)
 ![HTML Reports Gallery](Screenshots/25-html-reports-gallery.png)
 ![HTML Report Detail](Screenshots/26-html-report-detail.png)
+
+---
+
+## 🌐 Portfolio Ecosystem
+
+This project is part of a 4-repo enterprise IT portfolio covering the full IT lifecycle.
+
+| Layer | Project | Focus |
+|---|---|---|
+| 01 — Network Foundation | **You are here** | DNS · Connectivity · Network Diagnostics |
+| 02 — User Lifecycle | [Project Arabesque](https://github.com/rahatislamanik-spec/Project-Arabesque) | Onboarding · Offboarding · M365 Automation |
+| 03 — Identity & Security | [Enterprise IT Security Operations Toolkit](https://github.com/rahatislamanik-spec/Enterprise-IT-Security-Operations-Toolkit) | Entra ID · Intune · Defender · Zero Trust |
+| 04 — M365 Operations | [Meridian Institute M365 Lab](https://github.com/rahatislamanik-spec/Meridian-Institute-M365-Lab) | Exchange · Teams · SharePoint · Purview |
+
+👉 [View Full Portfolio](https://rahatislamanik-spec.github.io/IT-Portfolio-Rahat-Islam-Anik/)
